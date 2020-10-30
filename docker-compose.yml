@@ -6,7 +6,10 @@ networks:
 services:
   hits:
     image: tommoulard/hits
-    build: .
+    build:
+      context: .
+      args:
+        - 'SITE_ROOT=hits.changme.org'
     restart: always
     networks:
       - 'srv'
