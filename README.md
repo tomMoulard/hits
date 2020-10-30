@@ -36,3 +36,6 @@ services:
     volumes:
       - './postgresql/:/var/lib/postgresql/data'
 ```
+
+When you'll launch the service, hits compile a bunch of stuff, be patient,
+everything is gonna be alright.
