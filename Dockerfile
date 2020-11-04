@@ -12,6 +12,7 @@ ARG SITE_ROOT
 RUN sed -i 's/localhost/postgresql/g' config/dev.exs
 RUN sed -i 's/true/false/g' config/dev.exs
 RUN sed -i 's/homepage.svg/root\/homepage.svg/g' lib/hits_web/templates/page/index.html.eex
+RUN sed -i 's/http:/https:/g' lib/hits_web/templates/page/index.html.eex
 RUN sed -i "s/hits.dwyl.com/${SITE_ROOT}/g" lib/hits_web/templates/page/index.html.eex
 
 RUN mix local.hex --force
